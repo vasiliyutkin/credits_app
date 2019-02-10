@@ -1,21 +1,107 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- <iframe id="youtubeiframe84253308" width="100%" height="315"
+    src="https://www.youtube.com/embed/0AJaprLCgfw?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-<router-outlet></router-outlet>
+<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
+    src="//www.youtube.com/embed/u8PIGxjtAsk?rel=0&amp;fmt=18&amp;html5=1&amp;showinfo=0" frameborder="0"
+    allowfullscreen=""></iframe>
+
+<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
+    src="//www.youtube.com/embed/-ZDq6FTdil8?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
+    allowfullscreen=""></iframe>
+
+<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
+    src="//www.youtube.com/embed/7-KGb51VtHM?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
+    allowfullscreen=""></iframe>
+
+<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
+    src="//www.youtube.com/embed/dyjNxU9p920?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
+    allowfullscreen=""></iframe> -->
+
+<main class="wrapper">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/main">Главная</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/second">Вторая</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/third">Третья</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/fourth">Четвертая</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/fifth">Пятая</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/sixth">Шестая</a>
+            </li>
+        </ul>
+    </nav>
+
+    <router-outlet></router-outlet>
+</main>
+
+<div class="call-me">
+    <i class="fas fa-3x" [ngClass]="{'fa-times-circle': showFeedback, 'fa-phone-volume': !showFeedback}"
+        (click)="toggleFeedbackForm()"></i>
+
+    <div class="form-info"
+         *ngIf="showFeedback">
+        <h4>Перезвоним вам в течении 15 минут</h4>
+
+        <form action="https://formspree.io/blinovahv@gmail.com"
+              method="POST">
+            <div class="form-group">
+                <label for="tel">Номер телефона</label>
+                <input type="tel"
+                       id="tel"
+                       class="form-control"
+                       name="TELEPHONE"
+                       placeholder="Укажите Ваш телефон" />
+            </div>
+            <div class="form-group">
+                <label for="fio">ФИО</label>
+                <input type="text"
+                       id="fio"
+                       class="form-control"
+                       name="FIO">
+            </div>
+            <button type="submit" class="btn btn-success">ПЕРЕЗВОНИТЕ МНЕ</button>
+        </form>
+
+        <div>Звонок по России бесплатный</div>
+        <div>+7 918 305 50 49</div>
+        <div class="bottom-info">Нажимая на кнопку "ПЕРЕЗВОНИТЕ МНЕ", Вы принимаете условия политики конфиденциальности в отношении обработки персональных данных</div>
+    </div>
+</div>
+
+<footer class="footer fixed-bottom">
+    <div class="flex-container">
+        <div class="flex-container-item item-1">
+            <!-- <i class="fas fa-arrow-alt-circle-right"></i> -->
+            <ul class="profile-info">
+                <li>
+                    <h4>Андрейченко Светлана</h4>
+                </li>
+                <li>© 2019 | Консультант по жил. программе для покупки жилья в Сочи</li>
+                <li>
+                    <a class="policy" 
+                       href="http://xn----7sbabah7bng3brbcboaj4h.xn--p1ai/policy"
+                       _target="blank">Политика Конфиденциальности</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex-container-item item-2">
+            <span>Свяжитесь со мной</span>
+            <span><i class="fas fa-lg fa-mobile"></i> тел +7 918 305 50 49</span>
+        </div>
+        <div class="flex-container-item item-3">
+            <span>Адрес офиса:</span>
+            <span><i class="fas fa-lg fa-map-marker-alt"></i> г.Сочи</span>
+            <span>ул Орджоникидзе, 8а</span>
+        </div>
+    </div>
+</footer>

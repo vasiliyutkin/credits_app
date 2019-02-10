@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'apartment-credits-app';
+  showFeedback: boolean;
+  toggleFeedbackForm () {
+    this.showFeedback = !this.showFeedback;
+  }
 }
