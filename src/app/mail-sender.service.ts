@@ -8,10 +8,7 @@ export class MailSenderService {
 
   constructor(private http: HttpClient) { }
 
-  sendMail() {
-    return this.http.post('/sendMail', {
-      tel: 'telephone',
-      fio: 'fiofiofio'
-    });
+  sendMail(fio: string, tel: number) {
+    return this.http.post('/sendMail', { tel, fio });
   }
 }
