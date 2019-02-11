@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MailSenderService } from '../mail-sender.service';
 
 @Component({
   selector: 'app-sixth-page',
   templateUrl: './sixth-page.component.html',
   styleUrls: ['./sixth-page.component.scss']
 })
-export class SixthPageComponent implements OnInit {
+export class SixthPageComponent {
 
-  constructor() { }
+  model: { tel: number, fio: string } = { tel: null, fio: '' };
 
-  ngOnInit() {
+  constructor(private mailSenderService: MailSenderService) { }
+
+  resetForm() {
+    this.model.fio = '';
+    this.model.tel = null;
   }
 
+  onSubmit() {
+    this.mailSenderService.sendMail(this.model.fio, this.model.tel).subscribe(this.resetForm);
+  }
 }

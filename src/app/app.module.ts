@@ -13,6 +13,7 @@ import { FifthPageComponent } from './fifth-page/fifth-page.component';
 import { SixthPageComponent } from './sixth-page/sixth-page.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { CallBackComponent } from './call-back/call-back.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     SixthPageComponent,
     TopNavComponent,
     FooterComponent,
+    CallBackComponent,
   ],
   imports: [
     BrowserModule,

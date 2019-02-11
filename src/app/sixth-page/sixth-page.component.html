@@ -1,1 +1,71 @@
-<main></main>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 centered">
+                <h1>Сделайте решительный шаг <span class="highlighted">к своей квартире</span> в Сочи!</h1>
+            </div>
+            <div class="col-12 centered">
+                <h3>Заполните форму и запишитесь на бесплатную консультацию, на которой:</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="icon centered">
+                    <i class="fas fa-5x fa-home"></i>
+                </div>
+                <div class="info-text">
+                    <h4>
+                        <span class="highlighted">Я поделюсь опытом,</span>
+                        как купила квартиру в Сочи в отсрочку
+                        <span class="highlighted">под 0% годовых на 10 лет,</span>
+                        без справок о доходах и кредитной истории, и сэкономил на покупке 5 миллионов рублей!
+                    </h4>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="icon centered">
+                    <i class="fas fa-5x fa-hand-holding-usd"></i>
+                </div>
+                <div class="info-text">
+                    <h4>
+                        Узнаете как выгодно инвестировать финансы в европейские VIP счета с доходностью 20-30% годовых в
+                        валюте!
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row profile">
+            <div class="col-6">
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="tel">Номер телефона *</label>
+                        <input type="tel" id="tel" class="form-control" name="tel" [(ngModel)]="model.tel"
+                            #tel="ngModel" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="fio">ФИО *</label>
+                        <input type="text" id="fio" class="form-control" name="fio" [(ngModel)]="model.fio"
+                            #fio="ngModel" required />
+                    </div>
+
+                    <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">
+                        ПОЛУЧИТЬ ИНСТРУКЦИЮ БЕСПЛАТНО
+                    </button>
+                </form>
+
+                <p class="bottom-info">
+                    Нажимая на кнопку "ЗАПИСАТЬСЯ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ",
+                    Вы принимаете условия <a class="policy" href="http://xn----7sbabah7bng3brbcboaj4h.xn--p1ai/policy" target="_blank">Политики
+                        Конфиденциальности</a> в отношении обработки персональных данных
+                </p>
+            </div>
+
+            <div class="col-6">
+                <img src="../../assets/pictures/profile.PNG" alt="profile" class="rounded float-right" />
+            </div>
+        </div>
+    </div>
+</main>

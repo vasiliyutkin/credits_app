@@ -1,0 +1,33 @@
+<div class="call-me">
+  <i class="fas fa-3x" [ngClass]="{'fa-times-circle': showFeedback, 'fa-phone-volume': !showFeedback}"
+    (click)="toggleFeedbackForm()"></i>
+
+  <div class="form-info" *ngIf="showFeedback">
+    <h5>Перезвоним вам в течении 15 минут</h5>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+      <div class="form-group">
+        <label for="tel">Номер телефона *</label>
+        <input type="tel" id="tel" class="form-control" name="tel" [(ngModel)]="model.tel" #tel="ngModel" required />
+      </div>
+      <div class="form-group">
+        <label for="fio">ФИО *</label>
+        <input type="text" id="fio" class="form-control" name="fio" [(ngModel)]="model.fio" #fio="ngModel" required />
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">
+        ПЕРЕЗВОНИТЕ МНЕ
+      </button>
+    </form>
+
+    <div class="alert alert-warning" role="alert" *ngIf="showErrorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <div class="bottom-info">
+      Нажимая на кнопку "ПЕРЕЗВОНИТЕ МНЕ", Вы принимаете условия
+      <a class="policy" href="http://xn----7sbabah7bng3brbcboaj4h.xn--p1ai/policy" target="_blank">Политики Конфиденциальности</a>
+      в отношении обработки персональных данных
+    </div>
+  </div>
+</div>

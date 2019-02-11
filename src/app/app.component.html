@@ -1,76 +1,8 @@
 <!-- <iframe id="youtubeiframe84253308" width="100%" height="315"
-    src="https://www.youtube.com/embed/0AJaprLCgfw?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>
-
-<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
-    src="//www.youtube.com/embed/u8PIGxjtAsk?rel=0&amp;fmt=18&amp;html5=1&amp;showinfo=0" frameborder="0"
-    allowfullscreen=""></iframe>
-
-<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
-    src="//www.youtube.com/embed/-ZDq6FTdil8?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
-    allowfullscreen=""></iframe>
-
-<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
-    src="//www.youtube.com/embed/7-KGb51VtHM?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
-    allowfullscreen=""></iframe>
-
-<iframe id="youtubeiframe_1_81258702" width="100%" height="315"
-    src="//www.youtube.com/embed/dyjNxU9p920?rel=0&fmt=18&html5=1&showinfo=0" frameborder="0"
-    allowfullscreen=""></iframe> -->
+    src="https://www.youtube.com/embed/0AJaprLCgfw?autoplay=1&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>-->
+    
 <app-top-nav></app-top-nav>
-<main class="wrapper">
-    <router-outlet></router-outlet>
-</main>
+<main class="wrapper"><router-outlet></router-outlet></main>
 <app-footer></app-footer>
 
-<div class="call-me">
-    <i class="fas fa-3x"
-       [ngClass]="{'fa-times-circle': showFeedback, 'fa-phone-volume': !showFeedback}"
-       (click)="toggleFeedbackForm()"></i>
-
-    <div class="form-info"
-         *ngIf="showFeedback">
-        <h5>Перезвоним вам в течении 15 минут</h5>
-        <form name="form"
-              (ngSubmit)="f.form.valid && onSubmit()"
-              #f="ngForm"
-              novalidate>
-
-            <div class="form-group">
-                <label for="tel">Номер телефона *</label>
-                <input type="tel"
-                       id="tel"
-                       class="form-control"
-                       name="tel"
-                       [(ngModel)]="model.tel"
-                       #tel="ngModel"
-                       required />
-            </div>
-            <div class="form-group">
-                <label for="fio">ФИО *</label>
-                <input type="text"
-                       id="fio"
-                       class="form-control"
-                       name="fio"
-                       [(ngModel)]="model.fio"
-                       #fio="ngModel"
-                       required />
-            </div>
-
-            <button type="submit"
-                    class="btn btn-success"
-                    [disabled]="!f.form.valid">
-                    ПЕРЕЗВОНИТЕ МНЕ
-            </button>
-        </form>
-
-        <div class="alert alert-warning"
-             role="alert"
-             *ngIf="showErrorMessage">
-            {{ errorMessage }}
-        </div>
-
-        <div class="bottom-info">
-            Нажимая на кнопку "ПЕРЕЗВОНИТЕ МНЕ", Вы принимаете условия политики конфиденциальности в отношении обработки персональных данных
-        </div>
-    </div>
-</div>
+<app-call-back></app-call-back>

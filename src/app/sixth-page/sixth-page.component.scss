@@ -1,9 +1,62 @@
+@import '../shared/common';
 main {
-    width: 100vw;
-    height: 100vh;
+    min-height: 140vh;
     background: url(../../assets/pictures/bg1.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    align-content: center;
+    align-items: center;
+    h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+    h3 {
+        padding-bottom: 4px;
+        border-bottom: 3px solid $highlight;
+    }
+}
+
+.highlighted {
+    color: $highlight;
+}
+
+.icon {
+    color: $green;
+    margin: 24px;
+}
+
+.info-text {
+    color: $white;
+}
+
+.profile {
+    margin-top: 40px;
+}
+
+form {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $white;
+}
+
+.bottom-info {
+    font-size: 11px;
+    margin-top: 8px;
+    color: $white;
+    text-align: center;
+}
+
+button[disabled] {
+    background-color: $grey;
+    color: $darker;
 }

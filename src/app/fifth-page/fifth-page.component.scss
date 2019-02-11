@@ -1,9 +1,23 @@
+@import '../shared/common';
+
 main {
-    width: 100vw;
-    height: 100vh;
+    min-height: 90vh;
     background: url(../../assets/pictures/bg4.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.info-row {
+    padding-top: 30px;
+    padding-left: 24px;
+}
+
+iframe {
+    padding: 25px;
+}
+
+.highlighted {
+    color: $highlight;
 }
