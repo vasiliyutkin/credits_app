@@ -1,0 +1,28 @@
+.footer {
+    background-color: #1e202e;
+    color: white;
+    .flex-container {
+        margin: 15px;
+        display: flex;
+        justify-content: space-around;
+        .flex-container-item {
+            display: flex;
+            align-content: flex-start;
+            flex-direction: column;
+            &.item-1 {
+                .profile-info {
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+i,
+.policy {
+    color: #02ac1e;
+}
+
+.fa-viber {
+    color: #fff;
+}
