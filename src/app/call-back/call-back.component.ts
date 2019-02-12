@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CallBackComponent {
 
-  model: { tel: number, fio: string } = { tel: null, fio: '' };
+  model: { tel: string, fio: string } = { tel: '', fio: '' };
   showErrorMessage: boolean;
   showFeedback: boolean;
 

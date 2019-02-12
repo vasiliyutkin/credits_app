@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SixthPageComponent {
 
-  model: { tel: number, fio: string } = { tel: null, fio: '' };
+  model: { tel: string, fio: string } = { tel: '', fio: '' };
 
   constructor(private mailSenderService: MailSenderService, private toastr: ToastrService) { }
 
