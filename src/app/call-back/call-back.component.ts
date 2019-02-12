@@ -30,6 +30,8 @@ export class CallBackComponent {
 
   onSubmit() {
     this.mailSenderService.sendMail(this.model.fio, this.model.tel)
-      .subscribe(this.resetForm, () => { this.showErrorMessage = true; });
+      .subscribe(() {
+        this.resetForm();
+      }, () => { this.showErrorMessage = true; });
   }
 }
