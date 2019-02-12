@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MailSenderService } from '../mail-sender.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-sixth-page',
@@ -10,14 +11,19 @@ export class SixthPageComponent {
 
   model: { tel: number, fio: string } = { tel: null, fio: '' };
 
-  constructor(private mailSenderService: MailSenderService) { }
+  constructor(private mailSenderService: MailSenderService, private toastr: ToastrService) { }
 
   resetForm() {
     this.model.fio = '';
     this.model.tel = null;
+    this.toastr.success('С Вами свяжутся в течении 15 минут!', 'Запрос успешно отправлен');
   }
 
   onSubmit() {
-    this.mailSenderService.sendMail(this.model.fio, this.model.tel).subscribe(this.resetForm);
+    this.mailSenderService
+      .sendMail(this.model.fio, this.model.tel)
+      .subscribe(() => {
+        this.resetForm();
+    });
   }
 }

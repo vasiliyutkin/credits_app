@@ -11,7 +11,6 @@ export class CallBackComponent {
 
   model: { tel: number, fio: string } = { tel: null, fio: '' };
   showErrorMessage: boolean;
-  errorMessage = 'Что-то пошло не так. Пожалуйста отправьте форму повторно';
   showFeedback: boolean;
 
   toggleFeedbackForm() {

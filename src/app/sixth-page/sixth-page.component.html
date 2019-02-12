@@ -41,15 +41,29 @@
                 <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
                     <div class="form-group">
-                        <label for="tel">Номер телефона *</label>
-                        <input type="tel" id="tel" class="form-control" name="tel" [(ngModel)]="model.tel"
-                            #tel="ngModel" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="fio">ФИО *</label>
-                        <input type="text" id="fio" class="form-control" name="fio" [(ngModel)]="model.fio"
-                            #fio="ngModel" required />
-                    </div>
+                        <label for="tel">Номер телефона*</label>
+                        <input type="text"
+                               id="tel"
+                               class="form-control"
+                               name="tel"
+                               prefix="+7 "
+                               mask="000 000-00-00"
+                               [(ngModel)]="model.tel"
+                               #tel="ngModel"
+                               required
+                               placeholder="+7 918 305 50 49" />
+                      </div>
+                      <div class="form-group">
+                        <label for="fio">ФИО*</label>
+                        <input type="text"
+                               id="fio"
+                               class="form-control"
+                               name="fio"
+                               [(ngModel)]="model.fio"
+                               #fio="ngModel"
+                               required
+                               placeholder="Иванов Иван Иванович" />
+                      </div>
 
                     <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">
                         ПОЛУЧИТЬ ИНСТРУКЦИЮ БЕСПЛАТНО
