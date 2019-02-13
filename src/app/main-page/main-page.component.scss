@@ -1,8 +1,5 @@
 @import '../shared/common';
-
 main {
-    width: 100vw;
-    height: 100vh;
     background: url(../../assets/pictures/main_photo.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -60,5 +57,12 @@ main {
     }
     100% {
         transform: scale(1, 1);
+    }
+}
+
+.page-header {
+    color: $white;
+    h1, h3 {
+        text-align: center;
     }
 }

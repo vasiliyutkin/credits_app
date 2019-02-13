@@ -1,1 +1,68 @@
-<main></main>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <div>За 5 лет работы программы помогли приобрести более 770 квартир по России, Киргизии и Казахстану
+                </div>
+                <div>По представленной жилищной программе лично приобрелa 2 квартиры в Сочи и Краснодаре</div>
+                <div>И сэкономилa более 5 млн. рублей на покупке жилья в Сочи</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="img">
+                    <img src="../../assets/pictures/property2.png" class="img-fluid" alt="property">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <div class="img">
+                        <img src="../../assets/pictures/room.jpg" class="img-fluid" alt="property">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <p>
+                        В сфере недвижимости более 10 лет, за это время помогла более 300 своим клиентам
+                        приобрести квартиру своей мечты. Являюсь собственником агентства недвижимости "Счастливый Дом".
+                    </p>
+
+                    <hr>
+
+                    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="tel">Номер телефона*</label>
+                            <input type="text" id="tel" class="form-control" name="tel" prefix="+7 "
+                                mask="000 000-00-00" [(ngModel)]="model.tel" #tel="ngModel" required
+                                placeholder="+7 918 305 50 49" />
+                        </div>
+                        <div class="form-group">
+                            <label for="fio">ФИО*</label>
+                            <input type="text" id="fio" class="form-control" name="fio" [(ngModel)]="model.fio"
+                                #fio="ngModel" required placeholder="Иванов Иван Иванович" />
+                        </div>
+
+                        <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">
+                            ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
+                        </button>
+                    </form>
+
+                    <p class="bottom-info">
+                        Нажимая на кнопку "ЗАПИСАТЬСЯ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ",
+                        Вы принимаете условия <a class="policy" [routerLink]="" (click)="policyVisible = true">Политики
+                            Конфиденциальности</a> в отношении обработки персональных данных
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<app-dialog [(visible)]="policyVisible">
+    <app-policy></app-policy>
+</app-dialog>

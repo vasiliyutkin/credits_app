@@ -7,7 +7,7 @@ const app = express();
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const indexFilePath = '/dist/apartment-credits-app/index.html';
-const businessEmailAddress = `vasiliyutkin13121991@gmail.com`;
+const businessEmailAddress = `andreichenko_sa@mail.ru`;
 
 app.use(express.static('./dist/apartment-credits-app'));
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -1,9 +1,35 @@
+@import '../shared/common';
+
 main {
-    width: 100vw;
-    height: 100vh;
     background: url(../../assets/pictures/bg3.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.heading {
+    color: $highlight;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+form {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    color: $darker;
+}
+
+.bottom-info {
+    font-size: 11px;
+    margin-top: 8px;
+    color: $darker;
+    text-align: center;
+}
+
+button[disabled] {
+    background-color: $grey;
+    color: $darker;
 }
