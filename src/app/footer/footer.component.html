@@ -1,27 +1,32 @@
-<footer class="footer fixed-bottom">
-  <div class="flex-container">
-    <div class="flex-container-item item-1">
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
       <ul class="profile-info">
         <li>
           <h4>Андрейченко Светлана</h4>
         </li>
         <li>© 2019 | Консультант по жил. программе для покупки жилья в Сочи</li>
         <li>
-          <a class="policy" href="http://xn----7sbabah7bng3brbcboaj4h.xn--p1ai/policy" target="_blank">Политика
-            Конфиденциальности</a>
+          <a class="policy" [routerLink]="" (click)="policyVisible = true">Политика Конфиденциальности</a>
         </li>
       </ul>
     </div>
-    <div class="flex-container-item item-2">
-      <span>Свяжитесь со мной</span>
-      <span><i class="fas fa-lg fa-mobile"></i> тел +7 918 305 50 49</span>
-      <span><i class="fab fa-lg fa-viber"></i> Viber</span>
-      <span><i class="fab fa-lg fa-whatsapp"></i> WhatsApp</span>
+
+    <div class="col-md-3">
+      <div>Свяжитесь со мной</div>
+      <div><i class="fas fa-lg fa-mobile"></i> тел +7 918 305 50 49</div>
+      <div><i class="fab fa-lg fa-viber"></i> Viber</div>
+      <div><i class="fab fa-lg fa-whatsapp"></i> WhatsApp</div>
     </div>
-    <div class="flex-container-item item-3">
-      <span>Адрес офиса:</span>
-      <span><i class="fas fa-lg fa-map-marker-alt"></i> г.Сочи</span>
-      <span>ул Орджоникидзе, 8а</span>
+
+    <div class="col-md-3">
+      <div>Адрес офиса:</div>
+      <div><i class="fas fa-lg fa-map-marker-alt"></i> г.Сочи</div>
+      <div>ул Орджоникидзе, 8а</div>
     </div>
   </div>
 </footer>
+
+<app-dialog [(visible)]="policyVisible">
+  <app-policy></app-policy>
+</app-dialog>

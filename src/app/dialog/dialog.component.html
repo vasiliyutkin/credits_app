@@ -1,0 +1,15 @@
+<div [@dialog]
+     *ngIf="visible"
+     class="dialog">
+  <i class="dialog__close-btn fa fa-lg fa-times"
+     (click)="close()"
+     *ngIf="closable"></i>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+
+</div>

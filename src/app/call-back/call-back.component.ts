@@ -12,6 +12,7 @@ export class CallBackComponent {
   model: { tel: string, fio: string } = { tel: '', fio: '' };
   showErrorMessage: boolean;
   showFeedback: boolean;
+  policyVisible: boolean;
 
   toggleFeedbackForm() {
     this.showFeedback = !this.showFeedback;

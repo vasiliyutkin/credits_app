@@ -1,3 +1,27 @@
 <main>
-    <!-- <img src="../../assets/pictures/profile.PNG" alt="profile"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 offset-md-11">
+                <div class="wrapper"
+                    (click)="showVideo = true">
+                    <div class="circle pulse"></div>
+                    <div class="circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <polygon points="40,30 65,50 40,70"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-call-back></app-call-back>
 </main>
+
+
+<app-dialog [(visible)]="showVideo">
+    <iframe id="youtubeiframe84253308" width="100%" height="800px"
+            src="https://www.youtube.com/embed/0AJaprLCgfw?autoplay=1&amp;rel=0"
+            frameborder="0"
+            allowfullscreen=""></iframe>
+</app-dialog>

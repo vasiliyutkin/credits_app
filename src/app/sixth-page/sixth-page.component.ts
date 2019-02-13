@@ -8,8 +8,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./sixth-page.component.scss']
 })
 export class SixthPageComponent {
-
   model: { tel: string, fio: string } = { tel: '', fio: '' };
+  policyVisible: boolean;
 
   constructor(private mailSenderService: MailSenderService, private toastr: ToastrService) { }
 

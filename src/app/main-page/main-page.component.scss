@@ -1,3 +1,5 @@
+@import '../shared/common';
+
 main {
     width: 100vw;
     height: 100vh;
@@ -6,4 +8,57 @@ main {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    .circle {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background-color: $green;
+        margin: auto;
+        transform: scale(1, 1);
+        &.pulse {
+            animation-timing-function: ease;
+            animation: pulse 2s infinite;
+            background-color: lighten($green, 25%);
+        }
+    }
+    svg {
+        fill: darken($green, 12%);
+        stroke: darken($green, 12%);
+        stroke-linejoin: round;
+        stroke-width: 5;
+        transition: all 0.3s;
+        &:hover {
+            cursor: pointer;
+            fill: darken($green, 17%);
+            stroke: darken($green, 17%);
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
