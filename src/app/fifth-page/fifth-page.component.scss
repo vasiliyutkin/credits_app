@@ -21,3 +21,12 @@ iframe {
 .highlighted {
     color: $highlight;
 }
+
+.accent {
+    color: $darker;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $white;
+}
